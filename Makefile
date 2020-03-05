@@ -1,7 +1,7 @@
 TAGS ?= ""
 GO_BIN ?= "go"
 GIT_REV := $(shell git describe --tags HEAD)
-GO_BUILD_FLAGS := -ldflags "-X github.com/markbates/pkger.Version=dev-$(GIT_REV)"
+GO_BUILD_FLAGS := -ldflags "-X github.com/al45tair/pkger.Version=dev-$(GIT_REV)"
 
 install: tidy
 	cd ./cmd/pkger && $(GO_BIN) install $(GO_BUILD_FLAGS) -tags ${TAGS} -v .

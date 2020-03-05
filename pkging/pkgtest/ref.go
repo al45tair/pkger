@@ -17,7 +17,7 @@ type Ref struct {
 }
 
 func NewRef() (*Ref, error) {
-	her, err := here.Package("github.com/markbates/pkger")
+	her, err := here.Package("github.com/al45tair/pkger")
 	if err != nil {
 		return nil, err
 	}

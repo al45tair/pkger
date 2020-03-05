@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger/pkging"
 )
 
 func Dump(w io.Writer, pkg pkging.Pkger) error {

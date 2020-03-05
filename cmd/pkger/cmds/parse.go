@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/parser"
+	"github.com/al45tair/pkger/parser"
 )
 
 type parseCmd struct {

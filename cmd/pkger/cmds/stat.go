@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/markbates/pkger"
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger"
+	"github.com/al45tair/pkger/pkging"
 )
 
 type statCmd struct {

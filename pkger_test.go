@@ -21,15 +21,15 @@ func Test_Current(t *testing.T) {
 
 	info, err := Current()
 	r.NoError(err)
-	r.Equal("github.com/markbates/pkger", info.ImportPath)
+	r.Equal("github.com/al45tair/pkger", info.ImportPath)
 }
 
 func Test_Info(t *testing.T) {
 	r := require.New(t)
 
-	info, err := Info("github.com/markbates/pkger")
+	info, err := Info("github.com/al45tair/pkger")
 	r.NoError(err)
-	r.Equal("github.com/markbates/pkger", info.ImportPath)
+	r.Equal("github.com/al45tair/pkger", info.ImportPath)
 }
 
 func Test_Create(t *testing.T) {
@@ -39,7 +39,7 @@ func Test_Create(t *testing.T) {
 	defer RemoveAll("/tmp")
 	f, err := Create("/tmp/test.create")
 	r.NoError(err)
-	r.Equal("github.com/markbates/pkger:/tmp/test.create", f.Name())
+	r.Equal("github.com/al45tair/pkger:/tmp/test.create", f.Name())
 	r.NoError(f.Close())
 }
 
@@ -53,7 +53,7 @@ func Test_MkdirAll(t *testing.T) {
 
 	f, err := Open("/tmp")
 	r.NoError(err)
-	r.Equal("github.com/markbates/pkger:/tmp", f.Name())
+	r.Equal("github.com/al45tair/pkger:/tmp", f.Name())
 	r.NoError(f.Close())
 }
 

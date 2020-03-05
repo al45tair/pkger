@@ -7,8 +7,8 @@ import (
 	"sync"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/pkging"
-	"github.com/markbates/pkger/pkging/stdos"
+	"github.com/al45tair/pkger/pkging"
+	"github.com/al45tair/pkger/pkging/stdos"
 )
 
 var current pkging.Pkger

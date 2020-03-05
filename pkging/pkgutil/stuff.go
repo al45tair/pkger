@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/parser"
-	"github.com/markbates/pkger/pkging/embed"
-	"github.com/markbates/pkger/pkging/mem"
+	"github.com/al45tair/pkger/parser"
+	"github.com/al45tair/pkger/pkging/embed"
+	"github.com/al45tair/pkger/pkging/mem"
 )
 
 func Stuff(w io.Writer, c here.Info, decls parser.Decls) error {

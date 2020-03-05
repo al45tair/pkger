@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/internal/maps"
-	"github.com/markbates/pkger/pkging"
-	"github.com/markbates/pkger/pkging/embed"
+	"github.com/al45tair/pkger/internal/maps"
+	"github.com/al45tair/pkger/pkging"
+	"github.com/al45tair/pkger/pkging/embed"
 )
 
 // MarshalJSON creates a fully re-hydratable JSON representation of *Pkger

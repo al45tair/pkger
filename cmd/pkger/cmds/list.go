@@ -8,10 +8,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/markbates/pkger"
-	"github.com/markbates/pkger/internal/takeon/github.com/markbates/hepa"
-	"github.com/markbates/pkger/internal/takeon/github.com/markbates/hepa/filters"
-	"github.com/markbates/pkger/parser"
+	"github.com/al45tair/pkger"
+	"github.com/al45tair/pkger/internal/takeon/github.com/markbates/hepa"
+	"github.com/al45tair/pkger/internal/takeon/github.com/markbates/hepa/filters"
+	"github.com/al45tair/pkger/parser"
 )
 
 type listCmd struct {

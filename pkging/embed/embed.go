@@ -7,8 +7,8 @@ import (
 	"io"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/internal/takeon/github.com/markbates/hepa"
-	"github.com/markbates/pkger/internal/takeon/github.com/markbates/hepa/filters"
+	"github.com/al45tair/pkger/internal/takeon/github.com/markbates/hepa"
+	"github.com/al45tair/pkger/internal/takeon/github.com/markbates/hepa/filters"
 )
 
 func Decode(src []byte) ([]byte, error) {

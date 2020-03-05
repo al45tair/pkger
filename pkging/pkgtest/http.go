@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger/pkging"
 	"github.com/stretchr/testify/require"
 )
 

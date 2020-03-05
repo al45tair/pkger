@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/internal/maps"
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger/internal/maps"
+	"github.com/al45tair/pkger/pkging"
 )
 
 var _ pkging.Pkger = &Pkger{}

@@ -3,7 +3,7 @@ package pkgtest
 import (
 	"testing"
 
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger/pkging"
 )
 
 func CurrentTest(t *testing.T, ref *Ref, pkg pkging.Pkger) {

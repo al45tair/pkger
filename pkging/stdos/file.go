@@ -6,7 +6,7 @@ import (
 	"path"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger/pkging"
 )
 
 var _ pkging.File = &File{}

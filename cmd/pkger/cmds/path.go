@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger"
+	"github.com/al45tair/pkger"
 )
 
 type pathCmd struct {

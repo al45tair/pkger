@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/markbates/pkger/pkging/pkgtest"
+	"github.com/al45tair/pkger/pkging/pkgtest"
 	"github.com/stretchr/testify/require"
 )
 

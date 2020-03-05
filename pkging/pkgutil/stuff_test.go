@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/markbates/pkger/parser"
-	"github.com/markbates/pkger/pkging/mem"
-	"github.com/markbates/pkger/pkging/pkgtest"
-	"github.com/markbates/pkger/pkging/stdos"
+	"github.com/al45tair/pkger/parser"
+	"github.com/al45tair/pkger/pkging/mem"
+	"github.com/al45tair/pkger/pkging/pkgtest"
+	"github.com/al45tair/pkger/pkging/stdos"
 	"github.com/stretchr/testify/require"
 )
 

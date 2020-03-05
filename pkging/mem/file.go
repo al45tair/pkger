@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gobuffalo/here"
-	"github.com/markbates/pkger/pkging"
+	"github.com/al45tair/pkger/pkging"
 )
 
 const timeFmt = time.RFC3339Nano

@@ -1,6 +1,6 @@
 # Pkger
 
-[`github.com/markbates/pkger`](https://godoc.org/github.com/markbates/pkger) is a tool for embedding static files into Go binaries. It will, hopefully, be a replacement for [`github.com/gobuffalo/packr/v2`](https://godoc.org/github.com/gobuffalo/packr/v2).
+[`github.com/al45tair/pkger`](https://godoc.org/github.com/al45tair/pkger) is a tool for embedding static files into Go binaries. It will, hopefully, be a replacement for [`github.com/gobuffalo/packr/v2`](https://godoc.org/github.com/gobuffalo/packr/v2).
 
 ### Requirements
 
@@ -22,7 +22,7 @@ Paths:
   `/cmd/pkger/main.go`
 * If unspecified the path's package is assumed to be the current module.
 * Packages can specified in at the beginning of a path with a `:` seperator.
-github.com/markbates/pkger:/cmd/pkger/main.go
+github.com/al45tair/pkger:/cmd/pkger/main.go
 * There are no relative paths. All paths are absolute to the modules root.
 
 ```
@@ -34,7 +34,7 @@ github.com/markbates/pkger:/cmd/pkger/main.go
 ### Installation
 
 ```bash
-$ go get github.com/markbates/pkger/cmd/pkger
+$ go get github.com/al45tair/pkger/cmd/pkger
 $ pkger -h
 ```
 
@@ -72,7 +72,7 @@ package <reader>
 
 There may be reasons where you don't reference a particular file, or folder, that you want embedded in your application, such as a build artifact.
 
-To do this you may use either the [`github.com/markbates/pkger#Include`](https://godoc.org/github.com/markbates/pkger#Include) function to set a no-op parser directive to include the specified path.
+To do this you may use either the [`github.com/al45tair/pkger#Include`](https://godoc.org/github.com/al45tair/pkger#Include) function to set a no-op parser directive to include the specified path.
 
 Alternatively, you may use the `-include` flag with the `pkger` and `pkger list` commands.
 
@@ -113,7 +113,7 @@ app
 
 ## Reference Application
 
-The reference application for the `README` examples, as well as all testing, can be found at [https://github.com/markbates/pkger/tree/master/pkging/pkgtest/testdata/ref](https://github.com/markbates/pkger/tree/master/pkging/pkgtest/testdata/ref).
+The reference application for the `README` examples, as well as all testing, can be found at [https://github.com/al45tair/pkger/tree/master/pkging/pkgtest/testdata/ref](https://github.com/al45tair/pkger/tree/master/pkging/pkgtest/testdata/ref).
 
 ```
 ├── actions
@@ -158,7 +158,7 @@ The reference application for the `README` examples, as well as all testing, can
 
 Pkger's API is modeled on that of the [`os`](https://godoc.org/os) package in Go's standard library. This makes Pkger usage familiar to Go developers.
 
-The two most important interfaces are [`github.com/markbates/pkger/pkging#Pkger`](https://godoc.org/github.com/markbates/pkger/pkging#Pkger) and [`github.com/markbates/pkger/pkging#File`](https://godoc.org/github.com/markbates/pkger/pkging#File).
+The two most important interfaces are [`github.com/al45tair/pkger/pkging#Pkger`](https://godoc.org/github.com/al45tair/pkger/pkging#Pkger) and [`github.com/al45tair/pkger/pkging#File`](https://godoc.org/github.com/al45tair/pkger/pkging#File).
 
 ```go
 type Pkger interface {
@@ -263,7 +263,7 @@ func run() error {
 
 ## Understanding the Parser
 
-The [`github.com/markbates/pkger/parser#Parser`](https://godoc.org/github.com/markbates/pkger/parser#Parser) works by statically analyzing the source code of your module using the [`go/parser`](https://godoc.org/go/parser) to find a selection of declarations.
+The [`github.com/al45tair/pkger/parser#Parser`](https://godoc.org/github.com/al45tair/pkger/parser#Parser) works by statically analyzing the source code of your module using the [`go/parser`](https://godoc.org/go/parser) to find a selection of declarations.
 
 The following declarations in your source code will tell the parser to embed files or folders.
 
@@ -284,26 +284,26 @@ $ pkger parse
  ".": [
   {
    "file": {
-    "Abs": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/foo/bar/baz",
+    "Abs": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/foo/bar/baz",
     "Path": {
      "Pkg": "app",
      "Name": "/foo/bar/baz"
     },
     "Here": {
-     "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref",
+     "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref",
      "ImportPath": "app",
      "Module": {
       "Path": "app",
       "Main": true,
-      "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref",
-      "GoMod": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/go.mod",
+      "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref",
+      "GoMod": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/go.mod",
       "GoVersion": "1.13"
      },
      "Name": "main"
     }
    },
    "pos": {
-    "Filename": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/main.go",
+    "Filename": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/main.go",
     "Offset": 629,
     "Line": 47,
     "Column": 27
@@ -313,26 +313,26 @@ $ pkger parse
   },
   {
    "file": {
-    "Abs": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/foo/bar/baz/biz.txt",
+    "Abs": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/foo/bar/baz/biz.txt",
     "Path": {
      "Pkg": "app",
      "Name": "/foo/bar/baz/biz.txt"
     },
     "Here": {
-     "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref",
+     "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref",
      "ImportPath": "app",
      "Module": {
       "Path": "app",
       "Main": true,
-      "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref",
-      "GoMod": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/go.mod",
+      "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref",
+      "GoMod": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/go.mod",
       "GoVersion": "1.13"
      },
      "Name": "main"
     }
    },
    "pos": {
-    "Filename": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/main.go",
+    "Filename": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/main.go",
     "Offset": 706,
     "Line": 51,
     "Column": 25
@@ -388,38 +388,38 @@ $ pkger list -json
  "ImportPath": "app",
  "Files": [
   {
-   "Abs": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/assets",
+   "Abs": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/assets",
    "Path": {
     "Pkg": "app",
     "Name": "/assets"
    },
    "Here": {
-    "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/assets",
+    "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/assets",
     "ImportPath": "",
     "Module": {
      "Path": "app",
      "Main": true,
-     "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref",
-     "GoMod": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/go.mod",
+     "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref",
+     "GoMod": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/go.mod",
      "GoVersion": "1.13"
     },
     "Name": "assets"
    }
   },
   {
-   "Abs": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/assets/css",
+   "Abs": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/assets/css",
    "Path": {
     "Pkg": "app",
     "Name": "/assets/css"
    },
    "Here": {
-    "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/assets",
+    "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/assets",
     "ImportPath": "",
     "Module": {
      "Path": "app",
      "Main": true,
-     "Dir": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref",
-     "GoMod": "$GOPATH/src/github.com/markbates/pkger/pkging/pkgtest/testdata/ref/go.mod",
+     "Dir": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref",
+     "GoMod": "$GOPATH/src/github.com/al45tair/pkger/pkging/pkgtest/testdata/ref/go.mod",
      "GoVersion": "1.13"
     },
     "Name": "assets"
